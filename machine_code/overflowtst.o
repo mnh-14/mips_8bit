@@ -1,0 +1,4 @@
+addi $t0, $zero, 120
+addi $t1, $zero, 120
+
+add $t0, $t1, $t0

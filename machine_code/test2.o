@@ -1,0 +1,12 @@
+addi $t0, $zero, 2
+addi $t1, $zero, 6
+addi $t2, $zero, 1
+
+add $t1, $t1, $t0
+
+subi $t0, $t1, 8
+j 2
+addi $t0, $zero, 5
+sub $t0, $t0, $t1
+
+add $t1, $t1, $t2

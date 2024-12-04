@@ -1,0 +1,10 @@
+addi $t0, $zero, 2
+addi $t1, $zero, 6
+addi $t2, $zero, 1
+addi $t3, $zero, -4
+
+sw $t1, 2($gp)
+sw $t3, 3($gp)
+
+lw $t4, 3($gp)
+j 4

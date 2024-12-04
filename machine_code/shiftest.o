@@ -1,0 +1,6 @@
+addi $t0, $zero, 2
+addi $t1, $zero, 6
+addi $t2, $zero, 1
+
+srl $t3,$t0, 1
+sll $t3, $t2, 4
