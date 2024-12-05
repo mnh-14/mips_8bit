@@ -73,6 +73,7 @@
     <a name="clabelfont" val="SansSerif plain 12"/>
     <comp loc="(500,140)" name="EX"/>
     <comp loc="(120,150)" name="control_manipulator_EX"/>
+    <comp loc="(150,240)" name="piped_pc_control"/>
     <comp loc="(290,140)" name="ID"/>
   </circuit>
   <circuit name="ID">
@@ -568,7 +569,6 @@
       <circ-anchor facing="east" height="6" width="6" x="57" y="67"/>
     </appear>
     <wire from="(320,110)" to="(380,110)"/>
-    <wire from="(330,50)" to="(330,120)"/>
     <wire from="(170,150)" to="(230,150)"/>
     <wire from="(270,160)" to="(320,160)"/>
     <wire from="(320,180)" to="(370,180)"/>
@@ -580,6 +580,7 @@
     <wire from="(370,170)" to="(370,180)"/>
     <wire from="(390,160)" to="(390,170)"/>
     <wire from="(380,110)" to="(380,120)"/>
+    <wire from="(330,50)" to="(330,60)"/>
     <wire from="(320,160)" to="(320,180)"/>
     <wire from="(320,110)" to="(320,130)"/>
     <wire from="(230,150)" to="(230,170)"/>
@@ -591,6 +592,7 @@
     <wire from="(370,170)" to="(390,170)"/>
     <wire from="(380,120)" to="(400,120)"/>
     <wire from="(450,120)" to="(470,120)"/>
+    <wire from="(330,80)" to="(330,120)"/>
     <wire from="(230,170)" to="(250,170)"/>
     <wire from="(470,150)" to="(480,150)"/>
     <wire from="(330,170)" to="(340,170)"/>
@@ -608,7 +610,7 @@
     <comp lib="0" loc="(330,50)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="Write Control"/>
+      <a name="label" val="Write Control Disable"/>
     </comp>
     <comp lib="0" loc="(250,170)" name="Splitter">
       <a name="fanout" val="4"/>
@@ -621,6 +623,10 @@
       <a name="bit5" val="2"/>
       <a name="bit6" val="3"/>
       <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="1" loc="(330,80)" name="NOT Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="20"/>
     </comp>
     <comp lib="0" loc="(480,150)" name="Pin">
       <a name="facing" val="west"/>
@@ -645,17 +651,17 @@
   </circuit>
   <circuit name="piped_pc_control">
     <a name="circuit" val="piped_pc_control"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="PC ctrl"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
-      <rect fill="none" height="30" stroke="#000000" stroke-width="2" width="30" x="50" y="50"/>
+      <rect fill="none" height="39" stroke="#000000" stroke-width="2" width="41" x="50" y="50"/>
       <circ-port height="8" pin="280,100" width="8" x="46" y="56"/>
-      <circ-port height="10" pin="280,270" width="10" x="45" y="65"/>
-      <circ-port height="8" pin="610,100" width="8" x="76" y="56"/>
-      <circ-port height="8" pin="650,270" width="8" x="76" y="66"/>
-      <circ-port height="10" pin="410,380" width="10" x="75" y="75"/>
-      <circ-anchor facing="east" height="6" width="6" x="77" y="57"/>
+      <circ-port height="10" pin="280,270" width="10" x="45" y="75"/>
+      <circ-port height="8" pin="610,100" width="8" x="86" y="56"/>
+      <circ-port height="8" pin="650,270" width="8" x="86" y="66"/>
+      <circ-port height="10" pin="410,380" width="10" x="65" y="85"/>
+      <circ-anchor facing="east" height="6" width="6" x="67" y="67"/>
     </appear>
     <wire from="(320,130)" to="(380,130)"/>
     <wire from="(410,310)" to="(410,380)"/>
