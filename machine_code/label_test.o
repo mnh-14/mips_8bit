@@ -1,0 +1,4 @@
+label1:
+addi $t0, $zero, 100
+addi $t1, $t0, 20
+j label1

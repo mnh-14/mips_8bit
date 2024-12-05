@@ -214,11 +214,41 @@ def save_processed_data(processed_data):
     return True
 
 
+def filter_label_values(codes:list[str]) -> tuple[list[str], dict[str, int]]:
+    new_codes = []
+    lables = dict()
+    for code in codes:
+        if ":" in code:
+            label = code.replace(":", " ").strip()
+            lables[label] = len(new_codes)
+        else:
+            new_codes.append(code)
+    return new_codes, lables
+
+
+
+def labeling(codes:list[str]):
+    filtered_codes, labels = filter_label_values(codes)
+    final_codes = []
+    for idx, code in enumerate(filtered_codes):
+        words = code.split(" ")
+        label = labels.get(words[-1], None)
+        if label is None:
+            final_codes.append(code)
+            continue
+        if words[0] != "j":
+            label = idx+1-label
+        label = str(label)
+        modified = code.replace(words[-1], label)
+        final_codes.append(modified)
+    return final_codes
+
 
 
 def main():
     inputs = []
     code_lines = get_code()
+    code_lines = labeling(code_lines)
     for line in code_lines:
         words = parser(line.strip())
         if len(words) == 0:
