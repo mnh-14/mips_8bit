@@ -295,6 +295,7 @@
       <a name="width" val="8"/>
     </comp>
     <comp lib="4" loc="(90,440)" name="Register"/>
+    <comp lib="9" loc="(470,260)" name="ctrl_unit"/>
     <comp lib="0" loc="(990,620)" name="Splitter">
       <a name="facing" val="south"/>
       <a name="appear" val="right"/>
@@ -333,7 +334,6 @@
       <a name="bit0" val="1"/>
       <a name="bit1" val="0"/>
     </comp>
-    <comp lib="9" loc="(470,260)" name="ctrl_unit"/>
     <comp lib="7" loc="(310,440)" name="Instruction Splitter"/>
     <comp lib="0" loc="(20,430)" name="Power"/>
     <comp lib="0" loc="(1090,350)" name="Power"/>
@@ -611,6 +611,7 @@
     <wire from="(950,200)" to="(950,240)"/>
     <wire from="(290,250)" to="(310,250)"/>
     <wire from="(1200,320)" to="(1270,320)"/>
+    <wire from="(720,110)" to="(750,110)"/>
     <wire from="(90,380)" to="(90,420)"/>
     <wire from="(370,330)" to="(390,330)"/>
     <wire from="(660,320)" to="(750,320)"/>
@@ -723,6 +724,7 @@
     <wire from="(1200,180)" to="(1220,180)"/>
     <wire from="(820,370)" to="(820,420)"/>
     <wire from="(280,420)" to="(350,420)"/>
+    <comp lib="13" loc="(740,150)" name="control_manipulator_EX"/>
     <comp lib="0" loc="(1020,320)" name="Power"/>
     <comp lib="6" loc="(333,281)" name="Text"/>
     <comp lib="0" loc="(280,370)" name="Splitter">
@@ -771,14 +773,12 @@
       <a name="bit22" val="2"/>
       <a name="bit23" val="2"/>
     </comp>
-    <comp lib="13" loc="(420,230)" name="ID"/>
-    <comp lib="14" loc="(1180,220)" name="MEM_WB"/>
     <comp lib="0" loc="(730,450)" name="Pin">
       <a name="facing" val="north"/>
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="14" loc="(870,230)" name="Ex_MEM"/>
+    <comp lib="13" loc="(420,230)" name="ID"/>
     <comp lib="0" loc="(730,300)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="4"/>
@@ -790,6 +790,7 @@
     <comp lib="0" loc="(1140,370)" name="Splitter">
       <a name="appear" val="center"/>
     </comp>
+    <comp lib="14" loc="(870,230)" name="Ex_MEM"/>
     <comp lib="0" loc="(350,330)" name="Splitter">
       <a name="appear" val="center"/>
     </comp>
@@ -797,7 +798,6 @@
       <a name="facing" val="west"/>
       <a name="appear" val="right"/>
     </comp>
-    <comp lib="13" loc="(740,150)" name="control_manipulator_EX"/>
     <comp lib="0" loc="(450,150)" name="Splitter">
       <a name="facing" val="south"/>
       <a name="fanout" val="7"/>
@@ -811,7 +811,6 @@
     <comp lib="0" loc="(520,370)" name="Splitter">
       <a name="appear" val="center"/>
     </comp>
-    <comp lib="0" loc="(750,110)" name="Power"/>
     <comp lib="0" loc="(1040,340)" name="Splitter">
       <a name="facing" val="north"/>
       <a name="appear" val="center"/>
@@ -835,7 +834,7 @@
       <a name="bit11" val="2"/>
       <a name="bit12" val="2"/>
     </comp>
-    <comp lib="13" loc="(720,230)" name="EX"/>
+    <comp lib="0" loc="(720,110)" name="Ground"/>
     <comp lib="0" loc="(1320,270)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
@@ -904,6 +903,8 @@
       <a name="bit6" val="none"/>
       <a name="bit7" val="none"/>
     </comp>
+    <comp lib="14" loc="(1180,220)" name="MEM_WB"/>
+    <comp lib="14" loc="(330,250)" name="IF_ID"/>
     <comp lib="0" loc="(500,300)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
@@ -925,8 +926,6 @@
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="14" loc="(570,230)" name="ID_EX"/>
-    <comp lib="14" loc="(330,250)" name="IF_ID"/>
     <comp lib="0" loc="(830,300)" name="Splitter">
       <a name="facing" val="south"/>
       <a name="fanout" val="1"/>
@@ -946,6 +945,7 @@
     <comp lib="4" loc="(1100,250)" name="RAM">
       <a name="bus" val="separate"/>
     </comp>
+    <comp lib="14" loc="(570,230)" name="ID_EX"/>
     <comp lib="0" loc="(500,260)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
@@ -978,5 +978,6 @@
     <comp lib="0" loc="(1230,140)" name="Splitter">
       <a name="appear" val="right"/>
     </comp>
+    <comp lib="13" loc="(720,230)" name="EX"/>
   </circuit>
 </project>
